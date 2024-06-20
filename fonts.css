@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Franklin Gothic Std';
+  src: url('/franklin/franklin.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Franklin';
+  src: url('/franklin/franklin-condensed.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
