@@ -1,13 +1,8 @@
-@font-face {
-  font-family: 'Franklin Gothic Std';
-  src: url('/franklin/franklin.otf') format('opentype');
-  font-weight: 700;
-  font-display: swap; 
-}
+@import url("https://use.typekit.net/bns3blg.css");
 
 @font-face {
-  font-family: 'Franklin';
+  font-family: 'Franklin Gothic Std';
   src: url('/franklin/franklin-condensed.otf') format('opentype');
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
 }
