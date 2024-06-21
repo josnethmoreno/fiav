@@ -11,6 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
@@ -22,6 +27,66 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+ul {
+  padding-left: 0;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  outline: max(2px, 0.1em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input::placeholder {
+  opacity: .6;
+  color: black;
+  font-family: sans-serif;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1px solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: inline-grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: var(--yellow);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.1em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
 }
 
 #root, #__next {
