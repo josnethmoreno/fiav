@@ -7,11 +7,14 @@
   --black: #000000;
 
   --container: 1600px;
+
+  --sm-screen: 425px;
 }
 
 body {
   font-family: 'Mrs Eaves', serif;
   background-color: var(--pink);
+  overflow-x: hidden;
 }
 
 h1,
@@ -21,8 +24,6 @@ h4 {
   font-family: 'Franklin Gothic Std', sans-serif;
   text-transform: uppercase;
 }
-
-
 
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -38,6 +39,12 @@ h4 {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 header {
@@ -74,6 +81,31 @@ header a:hover {
   cursor: pointer
 }
 
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 0;
+  }
+
+  header a {
+    padding: 1rem 1rem .6rem 1rem;
+    font-size: 18px;
+  }
+
+  header a svg {
+    margin-top: -.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header a {
+    padding: .9rem 1rem .6rem 1rem;
+  }
+
+  header a svg {
+    display: none;
+  }
+}
+
 .hero {
   position: relative;
   height: 100dvh;
@@ -85,6 +117,10 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+.hero .container div:first-child {
+  height: 164px;
 }
 
 .hero picture {
@@ -123,7 +159,7 @@ header a:hover {
 .hero .button-primary {
   display: flex;
   align-items: center;
-  align-self: self-center;
+  align-self: end;
   gap: 1rem;
   padding: 1.4rem 1rem .8rem 1rem;
   color: var(--black);
@@ -153,6 +189,62 @@ header a:hover {
   border-radius: 50%;
 }
 
+@media (max-width: 1024px) {
+  .hero .container {
+    padding: 0;
+  }
+
+  .hero .container div:first-child {
+    height: 120px;
+  }
+
+  .hero-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero strong:first-child {
+    display: block;
+    font-size: 120px;
+    max-width: 6ch;
+    line-height: .9;
+    text-align: center;
+  }
+
+  .hero strong:last-child {
+    max-width: 20ch;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: -2rem;
+  }
+
+  .hero-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .hero-bottom div:first-child {
+    display: none;
+  }
+
+  .hero .button-primary {
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    font-size: 30px;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .hero .whatsapp {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    align-self: flex-end;
+  }
+}
+
 .text {
   padding: 5rem 0 0 0;
   color: var(--purple);
@@ -169,6 +261,17 @@ header a:hover {
   font-weight: 400;
   line-height: 60.8px;
   letter-spacing: -0.02em;
+}
+
+@media (max-width: 1024px) {
+  .text h2 {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 40px;
+    line-height: 1.2;
+  }
 }
 
 .data {
@@ -195,7 +298,7 @@ header a:hover {
   justify-content: space-between;
 }
 
-.data .grid .first p{
+.data .grid .first p {
   /*max-width: 280px;*/
   font-size: 24px;
 }
@@ -231,6 +334,45 @@ header a:hover {
   line-height: .9;
 }
 
+.data .mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .data .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem 0;
+  }
+
+  .data h2 {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+
+  .data .desktop {
+    display: none;
+  }
+
+  .data .mobile {
+    display: block;
+  }
+
+  .data .grid .second strong {
+    font-size: 48px;
+  }
+
+  .data .grid .second span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .data .desktop-sm {
+    display: none;
+  }
+}
+
 .sponsors {
   padding: 11rem 0 0 0;
 }
@@ -249,9 +391,67 @@ header a:hover {
 }
 
 .sponsors .flex {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem 0;
+}
+
+.sponsors .flex figure {
+  min-width: 16rem;
+}
+
+.sponsors .flex figure img {
+  margin: 0 auto;
+}
+
+.sponsors .flex-marquee {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sponsors {
+    padding: 5.6rem 0 0 0;
+  }
+
+  .sponsors .container {
+    gap: 3rem 0;
+  }
+
+  .sponsors h3 {
+    font-size: 24px;
+  }
+
+  .sponsors .flex {
+    display: none;
+  }
+
+  .sponsors .flex-marquee {
+    width: 100%;
+    display: flex;
+    user-select: none;
+  }
+
+  .sponsors .flex-marquee div {
+    display: flex;
+    animation: marquee 30s linear infinite;
+  }
+
+  .sponsors .flex-marquee figure {
+    display: flex;
+    align-items: center;
+    min-width: 12rem;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate(2%, 0);
+    }
+
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
 }
 
 .contact {
@@ -330,6 +530,43 @@ header a:hover {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .contact {
+    padding: 6rem 0 2.4rem 0;
+  }
+
+  .contact h3 {
+    font-size: 56px;
+    margin-bottom: 2rem;
+  }
+
+  .contact .form {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    max-width: 100%;
+  }
+
+  .contact .form-group {
+    width: 100%;
+  }
+
+  .contact .form-submit {
+    flex-direction: column;
+    align-items: start;
+    gap: 2.4rem;
+  }
+
+  .contact .form-submit button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact .desktop {
+    display: none;
+  }
+}
+
 footer .flex {
   display: flex;
   justify-content: space-between;
@@ -337,7 +574,71 @@ footer .flex {
   border-top: 1px solid var(--black);
 }
 
-footer .flex div {
+footer .flex>div {
   display: flex;
   gap: 0 1.4rem;
+}
+
+footer .mobile {
+  display: none;
+}
+
+footer .mobile > p{
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  footer .desktop {
+    display: none;
+  }
+
+  footer .mobile {
+    display: block;
+  }
+
+  footer .flex>div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .footer-menu {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+  }
+
+  footer .footer-menu p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  footer img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 668px) {
+  footer .flex {
+    padding-bottom: 2rem;
+  }
+  footer .flex>div {
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 2.2rem;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .footer-menu p {
+    display: none;
+  }
+
+  footer .mobile > p{
+    padding: 2rem 0 0 0;
+    text-align: center;
+    display: block;
+  }
 }
