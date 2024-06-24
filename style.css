@@ -95,6 +95,10 @@ header .button {
   line-height: 1;
 }
 
+header .button svg {
+  margin-top: -.4rem;
+}
+
 @media (max-width: 1024px) {
   header {
     padding: 1rem 0;
@@ -111,11 +115,11 @@ header .button {
 }
 
 @media (max-width: 500px) {
-  header a {
+  header .button {
     padding: .9rem 1rem .6rem 1rem;
   }
 
-  header a svg {
+  header .button svg {
     display: none;
   }
 }
