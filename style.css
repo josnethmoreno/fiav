@@ -9,10 +9,29 @@
   --container: 1600px;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--white) var(--black);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border: 8px solid var(--white);
+}
+
 body {
   font-family: 'Mrs Eaves';
   background-color: var(--pink);
   overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 h1,
@@ -52,6 +71,7 @@ header {
   width: 100%;
   padding: 2rem 0;
   z-index: 10;
+  opacity: 0;
 }
 
 header .container {
@@ -60,7 +80,7 @@ header .container {
   align-items: center;
 }
 
-header a {
+header .button {
   display: flex;
   align-self: self-center;
   gap: .7rem;
@@ -75,21 +95,17 @@ header a {
   line-height: 1;
 }
 
-header a:hover {
-  cursor: pointer
-}
-
 @media (max-width: 1024px) {
   header {
     padding: 1rem 0;
   }
 
-  header a {
+  header .button {
     padding: 1rem 1rem .6rem 1rem;
     font-size: 18px;
   }
 
-  header a svg {
+  header .button svg {
     margin-top: -.8rem;
   }
 }
@@ -145,6 +161,8 @@ header a:hover {
   text-transform: uppercase;
   line-height: .7;
   color: var(--yellow);
+  opacity: 0;
+  clip-path: inset(0% 100% 0% 0%);
 }
 
 .hero strong:last-child {
@@ -152,6 +170,8 @@ header a:hover {
   font-size: 49.11px;
   font-weight: 400;
   line-height: 49.11px;
+  opacity: 0;
+  clip-path: inset(0% 100% 0% 0%);
 }
 
 .hero .button-primary {
@@ -168,10 +188,20 @@ header a:hover {
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 2rem;
+  opacity: 0;
 }
 
 .hero .button-primary svg {
   margin-top: -.4rem;
+  transition: .3s ease;
+}
+
+.hero .button-primary:hover {
+  transition: .3s ease;
+}
+
+.hero .button-primary:hover svg {
+  transform: rotate(-24deg);
 }
 
 .hero-bottom {
@@ -185,6 +215,7 @@ header a:hover {
   align-self: center;
   padding: .8rem;
   border-radius: 50%;
+  opacity: 0;
 }
 
 @media (max-width: 1024px) {
@@ -244,7 +275,7 @@ header a:hover {
 }
 
 .text {
-  padding: 5rem 0 0 0;
+  padding: 8rem 0 4rem 0;
   color: var(--purple);
 }
 
@@ -311,8 +342,10 @@ header a:hover {
   display: flex;
   flex-direction: column;
   gap: 6rem 0;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   border-left: 1px solid #00000044;
+  opacity: 0;
+  clip-path: inset(0% 0% 100% 0%);
 }
 
 .data .grid .second li {
@@ -583,7 +616,7 @@ footer .mobile {
   display: none;
 }
 
-footer .mobile > p{
+footer .mobile>p {
   display: none;
 }
 
@@ -622,6 +655,7 @@ footer .mobile > p{
   footer .flex {
     padding-bottom: 2rem;
   }
+
   footer .flex>div {
     border-bottom: 1px solid var(--black);
     padding-bottom: 2.2rem;
@@ -636,7 +670,7 @@ footer .mobile > p{
     display: none;
   }
 
-  footer .mobile > p{
+  footer .mobile>p {
     padding: 2rem 0 0 0;
     text-align: center;
     display: block;
