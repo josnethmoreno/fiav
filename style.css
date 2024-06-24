@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Mrs Eaves', serif;
+  font-family: 'Mrs Eaves';
   background-color: var(--pink);
   overflow-x: hidden;
 }
@@ -299,8 +299,9 @@ header a:hover {
 }
 
 .data .grid .first p {
-  /*max-width: 280px;*/
+  max-width: 380px;
   font-size: 24px;
+  letter-spacing: -1px;
 }
 
 .data .grid .second {
@@ -332,6 +333,7 @@ header a:hover {
   font-size: 28px;
   font-weight: 400;
   line-height: .9;
+  max-width: 12ch;
 }
 
 .data .mobile {
