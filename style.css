@@ -436,6 +436,7 @@ header .button svg {
 
 .sponsors .flex figure {
   min-width: 16rem;
+
 }
 
 .sponsors .flex figure img {
@@ -467,17 +468,20 @@ header .button svg {
     width: 100%;
     display: flex;
     user-select: none;
+    gap: 3rem 0;
+    overflow: hidden;
   }
 
   .sponsors .flex-marquee div {
     display: flex;
-    animation: marquee 30s linear infinite;
+    animation: marquee 15s linear infinite;
   }
 
   .sponsors .flex-marquee figure {
     display: flex;
     align-items: center;
-    min-width: 12rem;
+    justify-content: center;
+    min-width: 15rem;
   }
 
   @keyframes marquee {
