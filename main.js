@@ -1,4 +1,5 @@
 import './style.css'
+import './prensa.css'
 import './reset.css'
 import './fonts.css'
 
@@ -26,7 +27,7 @@ tl.to('header', {
 	delay: 0.6,
 })
 tl.to(
-	'.hero-strong-1',
+	'.hero-center h2',
 	{
 		'clip-path': 'inset(0% 0% 0% 0%)',
 		y: 0,
@@ -35,7 +36,7 @@ tl.to(
 	},
 	'-=.4'
 )
-tl.to('.hero-strong-2', {
+tl.to('.hero-center p', {
 	'clip-path': 'inset(0% 0% 0% 0%)',
 	y: 0,
 	opacity: 1,

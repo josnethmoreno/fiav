@@ -44,51 +44,50 @@ input:focus {
 }
 
 input::placeholder {
-  opacity: .6;
-  color: black;
-  font-family: sans-serif;
+  opacity: .6 !important;
+  color: black !important;
 }
 
 input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  margin: 0;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background-color: transparent !important;
+  margin: 0 !important;
 }
 
 input[type="checkbox"] {
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.1px solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-  display: inline-grid;
-  place-content: center;
+  font: inherit !important;
+  color: currentColor !important;
+  width: 1.15em !important;
+  height: 1.15em !important;
+  border: 0.1px solid currentColor !important;
+  border-radius: 0.15em !important;
+  transform: translateY(-0.075em) !important;
+  display: inline-grid !important;
+  place-content: center !important;
 }
 
 input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
-  background-color: var(--yellow);
-  transform-origin: bottom left;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  content: "" !important;
+  width: 0.65em !important;
+  height: 0.65em !important;
+  transform: scale(0) !important;
+  transition: 120ms transform ease-in-out !important;
+  box-shadow: inset 1em 1em var(--black) !important;
+  background-color: var(--yellow) !important;
+  transform-origin: bottom left !important;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%) !important;
 }
 
 input[type="checkbox"]:checked::before {
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
 input[type="checkbox"]:focus {
-  outline: max(2px, 0.1em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
+  outline: max(2px, 0.1em) solid currentColor !important;
+  outline-offset: max(2px, 0.15em) !important;
 }
 
 #root, #__next {
-  isolation: isolate;
+  isolation: isolate !important;
 }
