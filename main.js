@@ -1,5 +1,4 @@
 import './style.css'
-import './prensa.css'
 import './reset.css'
 import './fonts.css'
 
