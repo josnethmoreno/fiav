@@ -551,6 +551,7 @@ header .button svg {
 .contact .form-submit {
   display: flex;
   flex-direction: column-reverse;
+  gap: 2rem;
   align-items: end;
 }
 
@@ -566,6 +567,7 @@ header .button svg {
 .contact .button-primary {
   display: flex;
   align-items: center;
+  justify-content: center;
   align-self: self-center;
   gap: 1rem;
   padding: 1.4rem 1rem .8rem 1rem;
@@ -577,14 +579,11 @@ header .button svg {
   text-transform: uppercase;
   line-height: 1;
   border: none;
+  width: 100%;
 }
 
 .contact .button-primary:hover {
   cursor: pointer;
-}
-
-.contact .form-prensa {
-  margin-top: 2rem;
 }
 
 .contact .form-prensa a {

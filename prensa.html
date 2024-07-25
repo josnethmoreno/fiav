@@ -84,10 +84,6 @@
               display: none !important;
             }
 
-            .mc_fieldset label {
-              visibility: hidden;
-            }
-
             .mc-field-group input::placeholder {
               opacity: 1 !important;
             }
@@ -101,7 +97,6 @@
               display: inline;
               width: auto;
               margin-right: 10px;
-              visibility: hidden;
             }
 
             #mergeRow-gdpr {
@@ -110,6 +105,10 @@
 
             #mergeRow-gdpr fieldset label {
               font-weight: normal;
+            }
+
+            #mergeRow-gdpr fieldset label a {
+              text-decoration: underline;
             }
 
             #mc-embedded-subscribe-form .mc_fieldset {
@@ -203,11 +202,8 @@
                 <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
                   <div class="content__gdpr">
                     <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field"><label
-                        class="checkbox subfield" for="gdpr399999"><input type="checkbox" checked id="gdpr_399999"
-                          name="gdpr[399999]" class="gdpr" value="Y"><span class="terms">Aceptar términos &amp;
-                          condiciones y política
-                          de
-                          privacidad</span></label></fieldset>
+                        class="checkbox subfield" for="gdpr399999"><input type="checkbox" id="gdpr_399999"
+                          name="gdpr[399999]" class="gdpr" value="Y"><span class="terms">He leido y acepto los <a href="./terminos.html">términos de servicio</a></label></fieldset>
                   </div>
                 </div>
 
@@ -216,8 +212,6 @@
                   <div class="response" id="mce-success-response" style="display: none;"></div>
                 </div>
                 <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                  /* real people should not fill this in and expect good things - do not remove this or risk form bot
-                  signups */
                   <input type="text" name="b_4cb403d613d39733a8a64d945_7c7f590e29" tabindex="-1" value="">
                 </div>
                 <div class="optionalParent">
