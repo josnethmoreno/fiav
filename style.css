@@ -590,6 +590,12 @@ header .button svg {
   text-decoration: underline;
 }
 
+.contact-periodista {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 32px;
+}
+
 @media (max-width: 1024px) {
   .contact {
     padding: 6rem 0 2.4rem 0;
@@ -629,6 +635,12 @@ header .button svg {
 
   .contact .desktop {
     display: none;
+  }
+
+  .contact-periodista {
+    padding-top: 4rem;
+    text-align: center;
+    font-size: 22px;
   }
 }
 footer {
