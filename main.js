@@ -38,7 +38,7 @@ tl.to('header', {
 	delay: 0.6,
 })
 tl.to(
-	'.hero-center h2',
+	'h2',
 	{
 		'clip-path': 'inset(0% 0% 0% 0%)',
 		y: 0,

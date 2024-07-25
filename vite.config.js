@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         prensa: resolve(__dirname, 'prensa.html'),
+        terminos: resolve(__dirname, 'terminos.html'),
       },
     },
   },

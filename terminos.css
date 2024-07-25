@@ -1,0 +1,101 @@
+.terminos {
+  background-color: transparent;
+}
+
+.terminos-hero {
+  position: relative;
+  height: 440px;
+}
+
+.terminos-hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.terminos-hero .container div:first-child {
+  height: 164px;
+}
+
+.terminos-hero h2 {
+  font-size: 120px;
+  color: var(--yellow);
+  font-weight: 300;
+  text-align: center;
+  line-height: 1;
+  padding-top: 3rem;
+  opacity: 0;
+  clip-path: inset(0% 100% 0% 0%);
+}
+
+@media (max-width: 1024px) {
+  .terminos-hero h2 {
+    font-size: 64px;
+  }
+}
+
+.terminos-hero picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.terminos-hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.terminos-text {
+  background-color: var(--pink);
+  font-size: 32px;
+}
+
+
+@media (max-width: 1024px) {
+  .terminos-text {
+    font-size: 18px;
+  }
+}
+
+.terminos-text .container {
+  padding: 4rem 1rem;
+  max-width: 1024px;
+}
+
+.terminos-text ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.terminos-text ol p {
+  margin-left: -2rem;
+}
+
+.terminos-text ol a {
+  text-decoration: underline;
+}
+
+.terminos-text ul {
+  list-style-type: disc;
+}
+
+
+@media (max-width: 1024px) {
+  .terminos-text ol {
+    padding-left: 1rem;
+  }
+
+  .terminos-text ol p {
+    margin-left: -1rem;
+  }
+  
+}

@@ -632,6 +632,9 @@ header .button svg {
     display: none;
   }
 }
+footer {
+  background-color: var(--pink);
+}
 
 footer .flex {
   display: flex;
