@@ -86,15 +86,22 @@ header .button {
   display: flex;
   align-self: self-center;
   gap: .7rem;
-  padding: 1.2rem 1rem .6rem 1rem;
-  color: var(--black);
-  background-color: var(--white);
+  padding: .8rem 1rem .4rem 1rem;
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white);
   border-radius: 6.14px;
   font-family: 'Franklin Gothic Std';
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
+  transition: .3s ease;
+}
+
+header .button:hover {
+  color: var(--black);
+  background-color: var(--white);
 }
 
 header .button svg {
@@ -170,6 +177,7 @@ header .button svg {
   color: var(--yellow);
   opacity: 0;
   clip-path: inset(0% 100% 0% 0%);
+  padding: 1rem 0 0 0;
 }
 
 
@@ -181,6 +189,11 @@ header .button svg {
   text-align: center;
   opacity: 0;
   clip-path: inset(0% 100% 0% 0%);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0 2rem;
 }
 
 .hero .button-primary {
@@ -211,6 +224,30 @@ header .button svg {
 
 .hero .button-primary:hover svg {
   transform: rotate(-24deg);
+}
+
+.hero .button-secondary {
+  display: flex;
+  align-self: center;
+  gap: .7rem;
+  padding: 1.2rem 1rem .6rem 1rem;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 6.14px;
+  font-family: 'Franklin Gothic Std';
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+}
+
+.hero .button-secondary.yellow {
+  background-color: var(--yellow);
+}
+
+.hero .button-secondary svg {
+  margin-top: -.4rem;
 }
 
 .hero-bottom {
@@ -280,6 +317,7 @@ header .button svg {
     align-self: flex-end;
   }
 }
+
 @media (max-width: 600px) {
   .hero h2 {
     font-size: 48px;
@@ -290,6 +328,7 @@ header .button svg {
   }
 
 }
+
 .text {
   padding: 8rem 0 4rem 0;
   color: var(--purple);
@@ -596,6 +635,31 @@ header .button svg {
   font-size: 32px;
 }
 
+.contact-periodista a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  gap: 1rem;
+  padding: 1rem 1rem .5rem 1rem;
+  color: var(--black);
+  background-color: var(--green);
+  border-radius: 6.14px;
+  font-family: 'Franklin Gothic Std';
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 2rem;
+  max-width: 942px;
+  margin: 0 auto;
+}
+
+.contact-periodista a svg {
+  margin-top: -.4rem;
+  transition: .3s ease;
+  width: 36px;
+}
+
 @media (max-width: 1024px) {
   .contact {
     padding: 6rem 0 2.4rem 0;
@@ -638,11 +702,10 @@ header .button svg {
   }
 
   .contact-periodista {
-    padding-top: 4rem;
-    text-align: center;
     font-size: 22px;
   }
 }
+
 footer {
   background-color: var(--pink);
 }

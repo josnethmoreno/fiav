@@ -53,7 +53,7 @@ tl.to('.hero-center p', {
 	opacity: 1,
 	duration: 0.8,
 })
-tl.to('.hero .button-primary', {
+tl.to('.hero .button-secondary', {
 	opacity: 1,
 	duration: 0.8,
 })
@@ -63,7 +63,7 @@ tl.to(
 		opacity: 1,
 		duration: 0.8,
 	},
-	'-=.6'
+	'-=.4'
 )
 
 gsap.to('.data-ul', {
