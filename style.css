@@ -99,6 +99,12 @@ header .button {
   transition: .3s ease;
 }
 
+header .button.fill {
+  color: var(--black);
+  background-color: var(--white);
+  border: 0;
+}
+
 header .button:hover {
   color: var(--black);
   background-color: var(--white);
@@ -194,6 +200,11 @@ header .button svg {
 .hero-buttons {
   display: flex;
   gap: 0 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  
 }
 
 .hero .button-primary {
@@ -294,22 +305,7 @@ header .button svg {
     font-size: 64px;
   }
 
-  .hero-bottom {
-    flex-direction: column-reverse;
-  }
-
-  .hero-bottom div:first-child {
-    display: none;
-  }
-
-  .hero .button-primary {
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    font-size: 30px;
-    border-radius: 0;
-    margin-bottom: 0;
-  }
+  
 
   .hero .whatsapp {
     margin-bottom: 1rem;
@@ -319,6 +315,9 @@ header .button svg {
 }
 
 @media (max-width: 600px) {
+  .hero {
+    height: fit-content;
+  }
   .hero h2 {
     font-size: 48px;
   }
@@ -327,6 +326,16 @@ header .button svg {
     font-size: 24px;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .hero-bottom {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .text {
