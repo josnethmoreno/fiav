@@ -186,7 +186,6 @@ header .button svg {
   padding: 1rem 0 0 0;
 }
 
-
 .hero p {
   color: var(--white);
   font-size: 49.11px;
@@ -203,9 +202,7 @@ header .button svg {
   justify-content: center;
 }
 
-@media (max-width: 1024px) {
-  
-}
+@media (max-width: 1024px) {}
 
 .hero .button-primary {
   display: flex;
@@ -305,8 +302,6 @@ header .button svg {
     font-size: 64px;
   }
 
-  
-
   .hero .whatsapp {
     margin-bottom: 1rem;
     margin-right: 1rem;
@@ -316,9 +311,9 @@ header .button svg {
 
 @media (max-width: 600px) {
   .hero {
-    height: fit-content;
+    min-height: fit-content;
   }
-  
+
   .hero h2 {
     font-size: 48px;
   }
@@ -351,6 +346,12 @@ header .button svg {
   .hero .button-secondary svg {
     width: 42px;
     margin-top: -.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h2 {
+    font-size: 34px;
   }
 }
 
