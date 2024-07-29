@@ -378,8 +378,9 @@ header .button svg {
   }
 
   .text p {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.2;
+    text-wrap: balance;
   }
 }
 
